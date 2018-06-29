@@ -1,0 +1,263 @@
+*{margin: 0;padding: 0;border: 0;outline: 0;box-sizing: border-box;-webkit-box-sizing:border-box;-webkit-border:0;}
+body{overflow-x: hidden;}
+.s1{
+    background: url(../image/img2.jpeg) #3a4025;height:calc(100vh - 100px);width: 100%;background-position: center;background-size: cover;position: relative;overflow: hidden;background-attachment: fixed;
+}
+.s2::after,.s2::before{content: '';width: 100%;height: 170px;background:white;position: absolute;top:-85px;}
+.s2::after{transform-origin: right bottom;transform: skewY(-7deg); }
+.s2::before{transform-origin: left bottom;transform: skewY(7deg);left: 0;} 
+.heading{color: whitesmoke;width: 100%;text-align: center;position: absolute;top: 50%;left: 0;transform: translateY(-77%);}
+.heading h1{ font-family: 'Skranji', cursive;}
+.heading p{
+   margin-top: -30px;
+   font-weight: 500;
+   font-family: 'Yeon Sung', cursive;
+   font-size: 20px;}
+.navbar-div{
+   transition: top 0.5s 0.1s;
+   width: 100%;
+   position: absolute;
+   top: calc(100% - 140px);
+   text-align: center;
+   display: flex;
+   justify-content: space-around;}
+.navbar-div li{
+    width:33%;
+    opacity: 0.8;
+    line-height: 0;
+    float: left;
+}
+.navbar-div li a:hover {color:coral;}
+a:hover{text-decoration: none;}
+li{list-style-type: none;}
+.navbar-div a{color: white;}
+.material-icons{font-size:25px;}
+.navbar-div li i{margin-right: 3px;}
+.navbar-div p{font-size: 15px;}
+.navbar-div .home{ display: none;}
+.navbar-div .login{margin-top: 10px;}
+.navbar-div .register{ transform:rotateZ(9deg);}
+.navbar-div .about{ transform:rotateZ(-9deg);}
+form input::-webkit-input-placeholder{color: black;}
+form input::-moz-placeholder{color: black;}
+form input::placeholder{color: black;} 
+        /*-------------------------form-------------------------*/
+.form-container{
+    transition: right 0.5s ease-in-out;
+    background: none;
+    position: absolute;
+    height: 100vh;
+    z-index: 7;
+    float: right;
+    right: -100%;
+}
+.login-div{
+    position: relative;
+    width: 100%;height: 100%;
+    background: none;
+    z-index: 7;overflow: hidden;
+}
+.form-div{
+    transition: width 0.3s 0.1s;
+    width: 87%;height: 120%;margin-top: -40px;
+    background-color:#777751;float: right;
+    border-radius: 37% 0 0 40%;
+    position: relative;
+    box-shadow:5px 5px 15px 10px rgba(0,0,0,0.5);overflow: hidden;
+}
+.login-icon{
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-left: 7px;
+}
+.form-div form{
+    position: absolute;
+    top: 50%;left:50%;transform: translate(-50%,-50%);
+    width: 75%;
+}
+.form-div form input{
+    width:100%;
+    display: block;
+    margin:17px 5px;
+    padding: 5px;
+    text-align: center;
+    border-radius:10px;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.5) inset;
+}
+.close-div-form{position: absolute;bottom: 20%;left: 50%;transform: translateX(-50%);text-align: center;margin-left: 7px;}
+.close-div{display: inline-block;margin-top: 10px;margin-left: 10px;cursor: pointer;position: absolute;}
+.form-div form  input[type=submit]{margin-top: 60px;background:wheat;}
+.login-icon i{font-size: 60px;}
+.login-div p{font-size:20px;}
+.close-div i{font-size: 50px;color: white;}
+.close-div-form i{display: none;cursor: pointer;transition:all 0.5s; transform: rotateZ(-180deg);}
+.s2{position: relative;z-index: 6;height: 1000px;background: grey;}
+/*-------------------------box-------------------------*/
+.left-box p{
+    position: absolute;
+    top: 45%;
+    left:30%;
+    transform: rotateZ(0deg);
+    font-size: 35px;
+    color: darkgrey;
+    opacity:0.7;
+    font-weight: bolder;
+}
+.center{
+    transition: all 0.5s ease-in-out;
+    height: 80%;position: absolute;top: 50%;right: 0; transform: translateY(-50%);
+    border-right: 1px solid black;opacity: 0.9;
+    z-index: 10;
+    width: 100%;
+}
+.center ul{
+    overflow:hidden;
+    text-align: right;
+    padding-right: 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.right-box .right{text-align: center;
+    transition:all 0.5s ease-in-out;
+    height: 75%;width: 100%;
+    position: absolute;top: 50%;transform: translateY(-50%);
+}
+.container-fluid{position: absolute;top: 10%; z-index:7;}
+.box{width: 95%;height:300px;margin: auto;box-shadow:0px 0px 20px 3px rgba(0,0,0,0.3);overflow: hidden;background: grey;}
+.left-box,.center-box,.right-box{float:left;height:100%;position:relative;}
+.left-box  {width:10%;}
+.center-box{width:40%;}
+.right-box {width:49.5%;}
+.story,.novel,.poem{background: grey;}
+.center ul li{margin: 25px 0;font-weight: bold;letter-spacing: 0.12em;font-family: cursive,sans-serif;}
+.center ul li:hover{cursor: pointer;}
+/*   Tablet MD only   */
+@media(min-width: 768px)
+{
+.sto-1,.sto-2,.sto-3{
+    border: 1px solid aqua;
+    display: inline-block;
+    position: absolute;top: 50%;transform: translateY(-50%);
+}
+    .sto-1{
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        width:35%;height:40%;
+    }
+    .sto-2{
+        left: 50%;
+        transform: translateX(-120%);
+        width:35%;height:40%;
+    }
+    .sto-3{
+        left: 50%;
+        transform: translateX(20%);
+        width:35%;height:40%;
+    }
+    .left-box p{font-size: 80px;}
+    .box{width: 70%;height: 400px;}
+    .material-icons{font-size: 35px;}
+    .navbar-div p{font-size: 20px;}
+    .close-div-form{bottom: 25%}
+    .login-icon{top: 25%;}
+    .form-div{width: 40%;font-family: cursive,serif;}
+    .close-div i {display: none;}
+    .login-icon i,.close-div-form i{font-size: 40px;color:white;}
+    .close-div-form i{display: block;bottom: 55%;}
+    .login-div p{font-size:15px;color: white;} 
+.close-div-form i:hover{transition:all 0.5s; transform:rotateZ(180deg);color: black;}
+}
+/*   Tablet MD    */
+@media(min-width: 769px)
+{   
+    .navbar-div{
+    width: 50%;
+    position: absolute;
+    top: calc((100vh - 195px));    
+    right:0;
+    transform: rotateZ(-7.5deg);
+    text-align: left;
+    margin-right: -20px;
+}
+.navbar-div li{
+    width: 25%;
+    opacity: 0.8;
+    float: left;
+}
+.navbar-div li i{
+    margin-right: 5px;
+    float: left;
+}   
+.navbar-div p{font-size: 15px;}
+.material-icons{font-size: 25px;}
+.close-div-form{bottom: 20%}
+.login-icon{top: 17%;}    
+.form-div form input{font-size: 15px;}
+.form-div{width: 23%;border-radius: 43% 0 0 47%;}    
+.form-div form input{margin:10px 5px;padding: 5px;}
+.form-div form  input[type=submit]{margin-top: 30px;}
+.navbar-div .about{margin-left: -7px;}
+.navbar-div .login{margin-left: 5px;margin-top: 0;}
+.navbar-div .home{ display: inline-block;} 
+.navbar-div .login{ margin-left:0;margin-top: 0;}
+.navbar-div .register{ transform:rotateZ(0deg);}
+.navbar-div .about{ transform:rotateZ(-0deg);} 
+}
+
+/*Phone XS  */
+@media(max-width:765px) and (orientation:landscape)
+{
+.navbar-div{
+    transition: top 0.5s 0.1s;
+    width: 50%;
+    top: 15px; 
+    left: 50%;
+    transform:translateX(-50%);
+    text-align: left;
+}
+.form-div{border-radius: 0;}
+.s1{height:calc(100vh - 10px);width: 100%;}
+.login-icon i{font-size: 35px;color:white;}
+.login-div p{font-size:15px;color: white;}
+.form-div form input{margin:10px 5px;padding: 5px;font-size: 13px;}
+.form-div form  input[type=submit]{margin-top: 20px;}
+.login-icon{top: 15%;margin-left:10px;}
+.close-div i{font-size: 37px;}    
+.navbar-div li{width:calc((100% * 0.3));}
+.navbar-div li i{float: left;}
+.navbar-div .register{ transform:rotateZ(0deg);}
+.navbar-div .about{ transform:rotateZ(-0deg);}
+.navbar-div .login {margin-top:0}  
+}
+
+/**************************EVENTS*****************************/
+.slideinr{transition: all 0.5s;right: 0;width: 100%;}
+.disable-scroll{transition: all 0.5s; height:100vh;overflow-y: hidden;}
+.centerr{transition: all 0.6s ease-in-out;right: -126%;width: 124.5%;opacity: 1;background: grey;}
+.opacity-down{transition: all 0.5s;opacity: 0;}
+.index{z-index: 8;}
+.active{color: #ffffff;}
+/**************************ANIMATIONS*****************************/
+/*Phone XS
+@media(min-width:300px)
+{}
+/*notebook SM
+@media(min-width:576px)
+{}
+/*Tablet MD
+@media(min-width: 768px)
+{}
+/*Lap LG
+@media(min-width:992px)
+{}
+/*Desktop XL
+@media(min-width:1200px)
+{} */

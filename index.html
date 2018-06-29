@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Infinity Dreams</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="icon/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+    <link href="https://fonts.googleapis.com/css?family=Skranji|Yeon+Sung" rel="stylesheet">
+    <link rel="stylesheet" href="css/id.css">
+</head>
+<body>
+     <div class="form-container">
+         <div class="login-div">
+            <div class="close-div"><i class="material-icons">close</i></div>
+             <div class="form-div">
+                <div class="login-icon"><i class="material-icons" style="color: white;">lock</i>
+                <p style="color: white;">Log In</p>
+                </div>
+                 <form method="post">
+                     <input type="text" placeholder="Username" name="umane" class="form-control">
+                     <input type="password" placeholder="Password" name="pwd" class="form-control">
+                     <input type="submit" name="submit" value="Sign In" class="btn">
+                 </form>
+                 <div class="close-div-form"><i class="material-icons">close</i></div>
+             </div>
+         </div>
+     </div>
+          <div class="s1">
+         <div class="heading">
+             <h1>INFINITY DREAMS</h1>
+             <p>Let's Show Your Creativity To The World</p>
+         </div>
+         <ul class="navbar-div">
+            <li class="home"><a href="#"><i class="material-icons">home</i><p>Home</p></a></li>
+            <li class="register"><a href="register.php"><i class="material-icons">assignment</i><p>Register</p></a></li>
+            <li class="login"><a href="#"><i class="material-icons">lock</i><p>Log In</p></a></li>
+            <li class="about"><a href="#about"><i class="material-icons">info</i><p>About</p></a></li>
+         </ul>
+      </div> 
+      <div class="s2"><br>
+      <div class="container-fluid">
+         <div class="row">
+          <div class="box">
+          <div class="left-box"><p>Writeups</p></div>
+          <div class="center-box">
+              <div class="center">
+                  <ul>
+                      <li class="sto active">Stories</li>
+                      <li class="nov">Novels</li>
+                      <li class="poe">Poems</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="right-box">
+              <div class="right poem"><h2>Poem</h2></div>
+              <div class="right novel"><h2>Novel</h2></div>
+              <div class="right story"><h2>Story</h2></div>      
+          </div>
+      </div>
+         </div>
+      </div>
+      </div>                               
+                 
+                  
+                    <!--JS FILES-->
+    <script src="js/jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+//onclick
+        $('.login').click(function(){
+            $('body').addClass('disable-scroll');
+            $('.form-container').addClass('slideinr')
+        });
+        $('.close-div-form,.close-div').click(function(){
+            $('.form-container').removeClass('slideinr')
+            $('body').removeClass('disable-scroll')
+        });
+        $('.center ul li').click(function(){
+            $('.center').addClass('centerr');
+            setTimeout(function(){
+                $('.center').removeClass('centerr');
+            },700);
+        });  
+        $('.center ul .sto').click(function(){
+            setTimeout(function(){
+                $('.story').addClass('index');$('.novel,.poem').removeClass('index');
+                $('.sto').addClass('active');$('.nov,.poe').removeClass('active');
+            },700);
+        });
+        $('.center ul .nov').click(function(){
+            setTimeout(function(){
+                $('.novel').addClass('index');$('.story,.poem').removeClass('index');
+                $('.nov').addClass('active');$('.sto,.poe').removeClass('active');
+            },700);
+        });
+        $('.center ul .poe').click(function(){
+            setTimeout(function(){
+                $('.poem').addClass('index');$('.story,.novel').removeClass('index');
+                $('.poe').addClass('active');$('.nov,.sto').removeClass('active');
+            },700);
+        });
+//onscroll
+        $(window).scroll(function(){
+            var scrollval=$(this).scrollTop();
+            $('.heading p,.heading h1').css({
+                'transform':'translate(0px,'+ scrollval/3 + 'px)'
+            });
+            $('.navbar-div').css({
+                right:'-'+scrollval+'px'
+            }); 
+        });
+    }); //documnet ready
+    </script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/material.min.js"></script>
+    <script src="js/id.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+
+</body>
+</html>
